@@ -65,7 +65,7 @@ def train_xgboost():
     prediction = model.predict(X_test)
     return prediction
 
-#SVR is absolute trash without scaling it. So scaling it is done by default and not specific to just the optimization bit.
+#SVR requires scaling features to work. So scaling it is done by default and not specific to just the optimization bit.
 #R2 score without scaling will be negative which is horrible.
 def train_svr():
     scaler = StandardScaler()
